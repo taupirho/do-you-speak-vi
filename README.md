@@ -1,5 +1,5 @@
 A few useful commands to help you become fluent in the Unix text editor vi. Note this 
-assumes you are in **command** mode NOT **insert** mode
+assumes you are in **command** mode of vi  NOT in **insert** mode
 
 **Useful vi commands**
 
@@ -7,15 +7,16 @@ Crucial to the goal of becoming fluent in vi is the concept of marks. Marks are
 simply a way of marking different records in vi so that you can refer to them in
 subsequent commands. Usually these commands will involve cutting and pasting. To
 mark a line of text use the **m** command followed by a letter in the range
-**a** to **z** ​, for example  **ma** will mark the current line with the letter a. Note
-that you don't see an 'a' when you type this command, it’s just an internal label maintained by vi.
-In the following examples expressions in brackets may be typed instead of the
+**a** to **z** , for example  **ma** will mark the current line with the letter a. Note
+that you don't see an 'ma' when you type this command, it’s just an internal label 
+maintained by vi. **NB In the following examples, expressions in brackets may be typed instead of the
 corresponding expression before the brackets. For example d(y)'a means you can
 type d'a or y'a.
 
+
 **Cut and Paste between a marked line and the current line.**
 
-​Goto the line you want to start cutting from. Type **ma** then put the curosr at
+Goto the line you want to start cutting from. Type **ma** then put the curosr at
 the line you want the cut to end at. Then for example:-
 
 **'a** - goto the line marked with a
@@ -27,13 +28,14 @@ the line you want the cut to end at. Then for example:-
 **P( p)**  - put back deleted or yanked lines before(after) current line
 
 **"xd(y)'a** - delete(yank) lines into a buffer named x, buffer x is
-overwritten. Use capital X to append lines to buffer x keeping whats already 
+overwritten. Use capital X to append lines to buffer x keeping what's already 
 in buffer x. This variant is useful when you want to cut and paste between
 two or more opened files.
 
-​**Cut and Paste between two marked lines.**
 
-​Goto the start line to be marked. Type **ma**. Goto the end line to be marked. Type **mb**. Then
+**Cut and Paste between two marked lines.**
+
+Goto the start line to be marked. Type **ma**. Goto the end line to be marked. Type **mb**. Then
 for example:-
 
 **:'a,'b d(y)** - deletes(yanks) lines between the two lines marked with a and b
@@ -66,6 +68,7 @@ for example:-
 
 **:%s/abc/xyz/g** - substitute all abc's with xyz's in whole file
 
+
 **The remembered text in substitutions**
 
 The remembered text in substitution patterns is defined by the & character and
@@ -82,6 +85,7 @@ Some examples should clarify.
 **:s/.\$/X&/** - put an X before last character in current line
 
 **:s/\\(.\*\\) HARRY \\(.\*\\)/\\2 \\1 HARRY/** - change a line containing DICK HARRY TOM to TOM DICK HARRY
+
 
 **Miscellaneous Commands**
 
@@ -150,7 +154,8 @@ cursor position
 
 **\^F(^B)** - scroll forward(back) one screen
 
-**Numbered buffers**
+
+**The numbered buffers**
 
 vi automatically saves deleted (whole lines of) text into into nine numbered
 buffers (1-9) which can be used to retrieve accidentally deleted text. The most
@@ -158,6 +163,7 @@ recent delete is in buffer number 1. To retrieve this use the command **"1p(P)**
 put back the line after(before) the current line. The dot command cycles through
 each of the buffers in turn therefore a quick way to see all the contents of all
 nine buffers is to use **"1p........**
+
 
 **Initialisation commands**
 
