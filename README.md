@@ -1,4 +1,5 @@
-A few useful commands to help you become fluent in the Unix text editor vi
+A few useful commands to help you become fluent in the Unix text editor vi. Note this 
+assumes you are in **command** mode NOT **insert** mode
 
 **Useful vi commands**
 
