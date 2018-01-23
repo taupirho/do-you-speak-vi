@@ -11,13 +11,14 @@ mark a line of text use the **m** command followed by a letter in the range
 that you don't see an 'ma' when you type this command, it’s just an internal label 
 maintained by vi. **NB In the following examples, expressions in brackets may be typed instead of the
 corresponding expression before the brackets. For example d(y)'a means you can
-type d'a or y'a.
+type d'a or y'a. Also the difference between deleting and yanking lines is that 
+deleted lines are renmoved from the buffer whereas yanked lines are left in place. 
 
 
 **Cut and Paste between a marked line and the current line.**
 
-Goto the line you want to start cutting from. Type **ma** then put the curosr at
-the line you want the cut to end at. Then for example:-
+Goto the line you want to start cutting from. Type **ma** then move the cursor to
+the line you want the cut to end at. Then for example you can ... :-
 
 **'a** - goto the line marked with a
 
