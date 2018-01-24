@@ -55,7 +55,7 @@ Of course you can do all of the above commands on numbered lines also, for examp
 
 **:3,5 mo(co) 7** -  move(copy) lines 3 to 5 after line 7
 
-**:.,+N** - delete current plus next N lines 
+**:.,+Nd** - delete current plus next N lines 
 
 <h3>Finding/substituting text</h3>
 
