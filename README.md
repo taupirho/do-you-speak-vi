@@ -22,7 +22,7 @@ deleted lines are renmoved from the buffer whereas yanked lines are left in plac
 Goto the line you want to start cutting from. Type **ma** then move the cursor to
 the line you want the cut to end at. Then for example you can ... 
 
-**'a** - goto the line marked with a
+**'a** - goto the start of the line marked with a
 
 **\`a** - goto the cursor position marked with a
 
@@ -49,6 +49,14 @@ for example:-
 
 **:'a,'b mo(co) .** - moves(copies) lines between marks to after current line
 
+Of course you can do all of the above commands on numbered lines also, for example
+
+**:13,20d** - deletes lines 13 through 20 inclusive
+
+**:3,5 mo(co) 7** -  move(copy) lines 3 to 5 after line 7
+
+**:.,+N** - delete current plus next N lines 
+
 <h3>Finding/substituting text</h3>
 
 **:s/abc/xzy/** - substitute first occurrence of abc with xyz on current line only
@@ -61,21 +69,23 @@ for example:-
 
 **:s/abc/\\U&/g** - capitalise all abc's on current line
 
-**:%s/...X/...Y/g** - substitute all X's in 4th character position on all lines with a 'Z'
+**:5,/ABC/s/XYZ/TOM** - substitute the string XYZ with TOM between line 5 and the next line that contains the text ABC 
+
+**:%s/^...X/...Y/g** - substitute all X's in 4th character position on all lines with a 'Z'
 
 **g/abc/s/123/456/g** - on all lines containing abc substitute 123 with 456
 
 **/(?)abc** - find next(previous) occurrence of abc starting from current cursor position
 
-**n** - find next or previous occurrence of search string
+**n(N)** - find next(previous) occurrence of a search string
 
 **:%s/abc/xyz/g** - substitute all abc's with xyz's in whole file
 
 
 <h3>The remembered text in substitutions</h3>
 
-The remembered text in substitution patterns is defined by the & character and
-**\\n** where **n** is between 1 and 9.The & is defined by the last regular
+The remembered text in substitution patterns is defined by the & character or
+**\\n** where **n** is between 1 and 9.The & represents the last regular
 expression found and the \\n variant is defined by any regular expression
 contained within escaped brackets reading from left to right. For example in the
 search expression **/\^X\\(.T\\)xyz\\(xxx\\)** where we are trying to find a line
@@ -100,9 +110,9 @@ Some examples should clarify.
 
 **\^v** - allows entering of control characters such as escape
 
-**J** - join two lines together
+**NJ** - join N lines after current line to the end of current line
 
-**!! command** - put result of O/S command into current buffer at current
+**!! O/S command** - put result of **operating system command** into current buffer at current
 cursor position
 
 **N\|** - goto character N of current line
@@ -133,15 +143,15 @@ cursor position
 
 **O** - open a new line above current one and start input mode
 
-**dd** - delete current line
+**Ndd** - delete N lines atrting at current line
 
-**dw** - delete current word
+**Ndw** - delete next N words
 
 <h3>Moving about in the file  (in command mode)</h3>
 
-**j(k)** - move cursor down(up) one line
+**Nj(k)** - move cursor down(up) N lines
 
-**h(l)** - move cursor left(right) one character
+**Nh(l)** - move cursor left(right) N characters
 
 **:G** - goto end of file
 
@@ -156,6 +166,8 @@ cursor position
 **W** - move to start of next word
 
 **\^F(^B)** - scroll forward(back) one screen
+
+**\^D(^U)** - scroll forward(back) a half screen
 
 
 <h3>The numbered buffers</h3>
