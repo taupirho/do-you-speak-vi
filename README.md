@@ -1,10 +1,7 @@
-
-<span style="font-size: 18px;"> INSPIRATION DAY</span>
-
 A few useful commands to help you become fluent in the Unix text editor vi. Note this 
 assumes you are in **command** mode of vi  NOT in **insert** mode
 
-**Useful vi commands**
+<h2>Useful vi commands</h2>
 
 Crucial to the goal of becoming fluent in vi is the concept of marks. Marks are
 simply a way of marking different sections or records of your buffer in vi so that you 
@@ -20,7 +17,7 @@ type d'a or y'a. The difference between deleting and yanking lines is that
 deleted lines are renmoved from the buffer whereas yanked lines are left in place.**
 
 
-**Cut and Paste between a marked line and the current line.**
+<h3>Cut and Paste between a marked line and the current line.</h3>
 
 Goto the line you want to start cutting from. Type **ma** then move the cursor to
 the line you want the cut to end at. Then for example you can ... 
@@ -39,7 +36,7 @@ in buffer x. This variant is useful when you want to cut and paste between
 two or more opened files.
 
 
-**Cut and Paste between two marked lines.**
+<h3>Cut and Paste between two marked lines.</h3>
 
 Goto the start line to be marked. Type **ma**. Goto the end line to be marked. Type **mb**. Then
 for example:-
@@ -52,7 +49,7 @@ for example:-
 
 **:'a,'b mo(co) .** - moves(copies) lines between marks to after current line
 
-**Finding/substituting text**
+<h3>Finding/substituting text</h3>
 
 **:s/abc/xzy/** - substitute first occurrence of abc with xyz on current line only
 
@@ -75,7 +72,7 @@ for example:-
 **:%s/abc/xyz/g** - substitute all abc's with xyz's in whole file
 
 
-**The remembered text in substitutions**
+<h3>The remembered text in substitutions</h3>
 
 The remembered text in substitution patterns is defined by the & character and
 **\\n** where **n** is between 1 and 9.The & is defined by the last regular
@@ -93,7 +90,7 @@ Some examples should clarify.
 **:s/\\(.\*\\) HARRY \\(.\*\\)/\\2 \\1 HARRY/** - change a line containing DICK HARRY TOM to TOM DICK HARRY
 
 
-**Miscellaneous Commands**
+<h3>Miscellaneous Commands</h3>
 
 **:\#** - display current line number
 
@@ -140,7 +137,7 @@ cursor position
 
 **dw** - delete current word
 
-**Moving about in the file  (in command mode)**
+<h3>Moving about in the file  (in command mode)</h3>
 
 **j(k)** - move cursor down(up) one line
 
@@ -161,7 +158,7 @@ cursor position
 **\^F(^B)** - scroll forward(back) one screen
 
 
-**The numbered buffers**
+<h3>The numbered buffers</h3>
 
 vi automatically saves deleted (whole lines of) text into into nine numbered
 buffers (1-9) which can be used to retrieve accidentally deleted text. The most
@@ -171,7 +168,7 @@ each of the buffers in turn therefore a quick way to see all the contents of all
 nine buffers is to use **"1p........**
 
 
-**Initialisation commands**
+<h3>Initialisation commands</h3>
 
 We can put vi initialisation commands in a file called .exrc in our home directory. When vi 
 is invoked it reads this file and the commands contained in it are executed and are in
