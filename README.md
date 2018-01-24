@@ -1,24 +1,29 @@
+
+<span style="font-size: 18px;"> INSPIRATION DAY</span>
+
 A few useful commands to help you become fluent in the Unix text editor vi. Note this 
 assumes you are in **command** mode of vi  NOT in **insert** mode
 
 **Useful vi commands**
 
 Crucial to the goal of becoming fluent in vi is the concept of marks. Marks are
-simply a way of marking different records in vi so that you can refer to them in
-subsequent commands. Usually these commands will involve cutting and pasting. To
-mark a line of text use the **m** command followed by a letter in the range
+simply a way of marking different sections or records of your buffer in vi so that you 
+can refer to them in subsequent commands. Usually these commands will involve cutting 
+and/or pasting. To mark a line of text use the **m** command followed by a letter in the range
 **a** to **z** , for example  **ma** will mark the current line with the letter a. Note
-that you don't see an 'ma' when you type this command, it’s just an internal label 
-maintained by vi. **NB In the following examples, expressions in brackets may be typed instead of the
+that you won't see the characters 'ma' when you type this command (**if you do it means 
+you are in INSERT mode!**), it’s just an internal label maintained by vi. 
+
+**NB In the following examples, expressions in brackets may be typed instead of the
 corresponding expression before the brackets. For example d(y)'a means you can
-type d'a or y'a. Also the difference between deleting and yanking lines is that 
-deleted lines are renmoved from the buffer whereas yanked lines are left in place. 
+type d'a or y'a. The difference between deleting and yanking lines is that 
+deleted lines are renmoved from the buffer whereas yanked lines are left in place.**
 
 
-**cut and Paste between a marked line and the current line.**
+**Cut and Paste between a marked line and the current line.**
 
 Goto the line you want to start cutting from. Type **ma** then move the cursor to
-the line you want the cut to end at. Then for example you can ... :-
+the line you want the cut to end at. Then for example you can ... 
 
 **'a** - goto the line marked with a
 
