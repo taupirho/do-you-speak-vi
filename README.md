@@ -1,7 +1,7 @@
 A few useful commands to help you become fluent in the Unix text editor vi. Note this 
-assumes know the basics already. Make sure you are in **command** mode of vi  
-NOT in **insert** mode. If you don't know what that last sentence means, you don't know
-the basics yet - get learning first!!
+assumes you know the basics already. Make sure you are in **command** mode of vi NOT in **insert** mode. 
+If you don't know what that last sentence means, you don't know the basics yet - get learning 
+those first!!
 
 <h2>Useful vi commands</h2>
 
